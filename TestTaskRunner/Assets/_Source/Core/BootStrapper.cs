@@ -10,6 +10,7 @@ public class BootStrapper : MonoBehaviour
     [SerializeField] private Transform playerTransform;
     [SerializeField] private float moveSpeed;
     [SerializeField] private PlayerMovement _movement;
+    [SerializeField] private Rigidbody2D _rigidbody2;
 
     private IMoveState _moveState;
     private void Awake()
@@ -18,8 +19,8 @@ public class BootStrapper : MonoBehaviour
     }
     private void SetUp()
     {
-        _moveState = new MovingForward();
-        _movement.Construct(_moveState, moveSpeed, playerTransform);
+        _moveState = new MovingDown();
+        _movement.Construct(_moveState, moveSpeed, playerTransform, _rigidbody2);
         player.Construct(playerTransform, movePower);
         inputListener.Construct(player, _movement);
     }

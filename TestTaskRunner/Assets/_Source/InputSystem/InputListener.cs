@@ -23,7 +23,7 @@ public class InputListener : MonoBehaviour
         }
         else if (Input.GetKeyUp(KeyCode.Space) || Input.GetMouseButtonUp(0))
         {
-            _movement.ChangeState(new MovingForward());
+            _movement.ChangeState(new MovingDown());
         }
     }
 }
