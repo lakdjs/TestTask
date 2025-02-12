@@ -5,6 +5,7 @@ using UnityEngine;
 public class CameraFollower : MonoBehaviour
 {
     [SerializeField] private Transform targetTransform;
+   
     private Vector3 offset;
     private void Awake()
     {
